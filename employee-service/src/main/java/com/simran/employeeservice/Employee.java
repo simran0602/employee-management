@@ -1,52 +1,70 @@
 package com.simran.employeeservice;
 
+//import com.simran.authservice.Login;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
+import org.springframework.data.neo4j.core.schema.Relationship;
 
 @Node
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
-public class EmployeeInfo {
+public class Employee {
 
-        @Id
-        private Long id;
+       @Id
+       @NotBlank(message = "Login ID is required")
+        private Long loginId;
+
+        @NotBlank(message = "Name is required")
         private String name;
-        private Long salary;
-        private String role;
 
-    public Long getId() {
-        return id;
-    }
+        @NotBlank(message = "Position is required")
+        private String position;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+        private String username;
 
-    public String getName() {
-        return name;
-    }
+        private String password;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+        public Long getLoginId() {
+            return loginId;
+        }
 
-    public Long getSalary() {
-        return salary;
-    }
+        public void setLoginId(Long loginId) {
+            this.loginId = loginId;
+        }
 
-    public void setSalary(Long salary) {
-        this.salary = salary;
-    }
+        public String getName() {
+            return name;
+        }
 
-    public String getRole() {
-        return role;
-    }
+        public void setName(String name) {
+            this.name = name;
+        }
 
-    public void setRole(String role) {
-        this.role = role;
+        public String getPosition() {
+            return position;
+        }
+
+        public void setPosition(String position) {
+            this.position = position;
+        }
+
+        public String getUsername() {
+            return username;
+        }
+
+        public void setUsername(String username) {
+            this.username = username;
+        }
+
+        public String getPassword() {
+            return password;
+        }
+
+        public void setPassword(String password) {
+            this.password = password;
+        }
     }
-}
