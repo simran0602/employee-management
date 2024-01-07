@@ -24,8 +24,10 @@ public class Employee {
         @NotBlank(message = "Position is required")
         private String position;
 
+        @NotBlank(message = "Username is required")
         private String username;
 
+        @NotBlank(message = "Password is required")
         private String password;
 
         public Long getLoginId() {
