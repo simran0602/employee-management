@@ -68,14 +68,14 @@ API-Gateway:- http://localhost:8084
 
 ### emp-service:
 #### GET :-
-Host-name/employee/getAll :  Retrieve details of all employee.
-Host-name/employee/getById/{id} : Retrieve employee details by ID.
+Host-name/employees/getAll :  Retrieve details of all employee.
+Host-name/employees/getById/{id} : Retrieve employee details by ID.
 #### POST :-
-Host-name/employee/addEmployee : Create a new employee.
+Host-name/employees/addEmployee : Create a new employee.
 #### PUT :-
-Host-name/employee/update/{id} : Update an existing employee.
+Host-name/employees/update/{id} : Update an existing employee.
 #### DELETE :-
-Host-name/employee/delete/{id} : Delete an employee.
+Host-name/employees/delete/{id} : Delete an employee.
 
 ### auth-service:
 POST
